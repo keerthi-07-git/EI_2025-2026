@@ -33,7 +33,9 @@ Mac/Linux:
     cd ~/Projects/EI_2025-2026\Exercise 2\Satellite Command System  
 
 Step 3: Run the Application
-Option A - Using Eclipse:  
+
+
+**Option A - Using Eclipse:**
 1. Open Eclipse  
 2. File → Import → Existing Projects into Workspace  
 3. Browse to: EI_2025-2026\Exercise 2\Satellite Command System   
@@ -41,11 +43,11 @@ Option A - Using Eclipse:
 5. Navigate to src/com/satellite/command/SatelliteCommandSystemApplication.java  
 6. Right-click → Run As → Java Application  
 
-Option B - Using Command Line:  
+**Option B - Using Command Line:**  
     javac -d bin -sourcepath src/com/satellite/command/**/*.java  
     java -cp bin com.satellite.command.SatelliteCommandSystemApplication  
 
-Option C - Using Maven (if pom.xml exists):  
+**Option C - Using Maven (if pom.xml exists):**
     mvn clean compile  
     mvn exec:java -Dexec.mainClass="com.satellite.command.SatelliteCommandSystemApplication"  
 
