@@ -1,27 +1,36 @@
-Decorator Pattern
+# Decorator Pattern
 
-Overview  
-The Decorator pattern allows adding new responsibilities to objects dynamically. Here, a FileStream is wrapped with compression and encryption decorators.
+## Overview
+The Decorator pattern allows behavior to be added to individual objects, dynamically, without affecting the behavior of other objects from the same class. Here, `SimpleCoffee` can be decorated with `MilkDecorator` and `SugarDecorator` to add new functionality.
 
-Setup  
+## Setup
 Clone this repository or download it as a ZIP and extract it:
+
 https://github.com/keerthi-07-git/EI_2025-2026.git
 
-Navigate into StructuralDesignPattern/Decorator before running the commands below.
+Navigate into `StructuralDesignPattern/Decorator` before running the commands below.
 
-Structure  
-- DataStream: Component interface  
-- FileStream: Concrete component  
-- EncryptDecorator: Concrete decorator  
-- CompressDecorator: Concrete decorator  
-- StructuralDecorator: Main class with entry point  
+## Structure
 
-How to Run  
-Compile:
-javac -d out -cp out src/*.java StructuralDecorator.java
+- **Coffee**: Interface for coffee objects  
+- **SimpleCoffee**: Concrete implementation of `Coffee`  
+- **CoffeeDecorator**: Abstract decorator implementing `Coffee`  
+- **MilkDecorator**: Adds milk functionality to a coffee object  
+- **SugarDecorator**: Adds sugar functionality to a coffee object  
+- **StructuralDecorator**: Main class with entry point
 
-Run:
-java -cp out structuraldesignpatterns.decorator.src.StructuralDecorator
 
-Expected Output:
-encrypted(compressed(raw-data))
+
+## How to Run  
+**Compile:**
+javac -d out -cp out src/*.java StructuralAdapter.java
+
+**Run:**
+java -cp out structuraldesignpatterns.adapter.src.StructuralAdapter
+
+**Output:**
+Cost: <total_cost>
+Description: Simple Coffee, Milk, Sugar
+
+Output will vary depending on which decorators you apply and in what order.
+
