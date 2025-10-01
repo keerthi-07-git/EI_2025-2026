@@ -1,5 +1,10 @@
 package com.satellite.command.infrastructure;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -7,13 +12,44 @@ public class Logger {
     private static Logger instance;
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
     
-    private Logger() {}
+    private static final String LOG_DIRECTORY = "logs";
+    private static final String LOG_FILE_NAME = "satellite-system.log";
+    private PrintWriter fileWriter;
+    private boolean fileLoggingEnabled = true;
+    
+    private Logger() {
+        initializeLogFile();
+    }
     
     public static synchronized Logger getInstance() {
         if (instance == null) {
             instance = new Logger();
         }
         return instance;
+    }
+    
+    private void initializeLogFile() {
+        try {
+            File logDir = new File(LOG_DIRECTORY);
+            if (!logDir.exists()) {
+                logDir.mkdirs();
+                System.out.println("Created logs directory: " + logDir.getAbsolutePath());
+            }
+            
+            File logFile = new File(LOG_DIRECTORY, LOG_FILE_NAME);
+            fileWriter = new PrintWriter(new BufferedWriter(new FileWriter(logFile, true)), true);
+            
+            String sessionStart = "\n" + "=".repeat(80) + "\n";
+            sessionStart += "SESSION STARTED: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+            sessionStart += "\n" + "=".repeat(80) + "\n";
+            fileWriter.println(sessionStart);
+            
+            System.out.println("Logging to file: " + logFile.getAbsolutePath());
+            
+        } catch (IOException e) {
+            System.err.println("Failed to initialize log file: " + e.getMessage());
+            fileLoggingEnabled = false;
+        }
     }
     
     public enum LogLevel {
@@ -57,11 +93,18 @@ public class Logger {
         
         System.out.println(logEntry);
         
-        if (throwable != null) {
-            System.err.println("Exception: " + throwable.getMessage());
-            if (level == LogLevel.DEBUG || level == LogLevel.ERROR || level == LogLevel.FATAL) {
-                throwable.printStackTrace();
+        if (fileLoggingEnabled && fileWriter != null) {
+            fileWriter.println(logEntry);
+            
+            if (throwable != null) {
+                fileWriter.println("Exception: " + throwable.getMessage());
+                throwable.printStackTrace(fileWriter);
             }
+        }
+        
+        if (throwable != null && (level == LogLevel.ERROR || level == LogLevel.FATAL)) {
+            System.err.println("Exception: " + throwable.getMessage());
+            throwable.printStackTrace();
         }
     }
     
@@ -75,5 +118,31 @@ public class Logger {
         String message = String.format("State change in %s: %s -> %s", 
             component, oldState, newState);
         info(message);
+    }
+    
+    public void close() {
+        if (fileWriter != null) {
+            String sessionEnd = "\n" + "=".repeat(80) + "\n";
+            sessionEnd += "SESSION ENDED: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+            sessionEnd += "\n" + "=".repeat(80) + "\n";
+            fileWriter.println(sessionEnd);
+            
+            fileWriter.flush();
+            fileWriter.close();
+            System.out.println("Log file closed successfully");
+        }
+    }
+    
+    public void setFileLoggingEnabled(boolean enabled) {
+        this.fileLoggingEnabled = enabled;
+        info("File logging " + (enabled ? "enabled" : "disabled"));
+    }
+    
+    public boolean isFileLoggingEnabled() {
+        return fileLoggingEnabled;
+    }
+    
+    public String getLogFilePath() {
+        return LOG_DIRECTORY + File.separator + LOG_FILE_NAME;
     }
 }
