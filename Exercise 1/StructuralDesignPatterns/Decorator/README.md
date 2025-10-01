@@ -23,10 +23,9 @@ Navigate into `StructuralDesignPattern/Decorator` before running the commands be
 
 ## How to Run  
 **Compile:**
-javac -d out -cp out src/*.java StructuralAdapter.java
-
+javac -d out -cp out src/*.java StructuralDecorator.java
 **Run:**
-java -cp out structuraldesignpatterns.adapter.src.StructuralAdapter
+java -cp out structuraldesignpatterns.decorator.src.StructuralDecorator
 
 **Output:**
 Cost: <total_cost>
