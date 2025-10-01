@@ -26,7 +26,7 @@ java -cp out creationaldesignpatterns.builder.src.CreationalBuilder
 
 You will be prompted to enter:
 
-### URL
+URL
 
 HTTP Method (GET, POST, PUT, DELETE)
 
