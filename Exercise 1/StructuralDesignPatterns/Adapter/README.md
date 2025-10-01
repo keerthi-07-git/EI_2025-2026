@@ -25,9 +25,7 @@ javac -d out -cp out src/*.java StructuralAdapter.java
 **Run:**
 java -cp out structuraldesignpatterns.adapter.src.StructuralAdapter
 
-**Output:**
-Cost: <total_cost>
-Description: Simple Coffee, Milk, Sugar
+
 
 Output will vary depending on which decorators you apply and in what order.
 
