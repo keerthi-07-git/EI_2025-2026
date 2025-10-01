@@ -5,7 +5,8 @@ The Chain of Responsibility pattern lets you pass requests along a chain of hand
 
 Setup  
 Clone this repository or download it as a ZIP and extract it:
-git clone https://github.com/your-username/design-patterns-java.git
+git clone https://github.com/keerthi-07-git/EI_2025-2026.git
+
 Navigate into BehaviouralDesignPattern/ChainOfResponsibility before running the commands below.
 
 Structure  
