@@ -6,7 +6,7 @@ Every folder includes source files, a main entry class, and a README with instru
 
 How to Get the Code  
 You can clone this repository using Git:
-git clone https://github.com/your-username/design-patterns-java.git
+https://github.com/keerthi-07-git/EI_2025-2026.git
 
 Or download it as a ZIP from GitHub and extract it:
 Click on the green "Code" button > Download ZIP > Extract on your machine.
