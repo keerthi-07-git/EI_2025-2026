@@ -19,7 +19,7 @@ Compile:
 javac -d out -cp out src/*.java CreationalBuilder.java
 
 Run:
-java -cp out creationaldesignpattern.builder.src.CreationalBuilder
+java -cp out creationaldesignpatterns.builder.src.CreationalBuilder
 
 Expected Output:
 POST /api/data Body:{id:1}
