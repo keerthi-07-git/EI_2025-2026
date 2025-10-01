@@ -21,7 +21,7 @@ public class ResetCommand implements Command {
         
         try {
             String currentState = controller.getCurrentStatus();
-            System.out.println("\n⚠️  WARNING: Reset Operation");
+            System.out.println("\n  WARNING: Reset Operation");
             System.out.println("Current State: " + currentState);
             System.out.println("This will reset the satellite to initial state:");
             System.out.println("  - Orientation: North");
@@ -60,4 +60,5 @@ public class ResetCommand implements Command {
     public String getDescription() {
         return "Reset satellite to initial state (requires confirmation)";
     }
+
 }
