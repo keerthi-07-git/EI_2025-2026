@@ -54,7 +54,9 @@ Method 2: Clone from GitHub
 Step 1: Clone the Repository  
     cd C:\Projects        (Windows)  
     cd ~/Projects         (Mac/Linux)  
-    git clone https://github.com/keerthi-07-git/EI_2025-2026.git 
+    git clone https://github.com/keerthi-07-git/EI_2025-2026.git
+
+    
     cd EI_2025-2026\Exercise 2\Satellite Command System   
 
 Step 2: Open in Eclipse  
