@@ -5,14 +5,13 @@ public class BehaviouralStrategy {
 
         Sorter sorter = new Sorter();
 
-        // Use QuickSort strategy
         sorter.setStrategy(new QuickSort());
-        sorter.sortArray(numbers.clone());  // clone to keep original array
+        sorter.sortArray(numbers.clone());  
 
-        // Switch to MergeSort strategy
         sorter.setStrategy(new MergeSort());
         sorter.sortArray(numbers.clone());
     }
 }
+
 
 
