@@ -21,7 +21,7 @@ Compile:
 javac -d out -cp out src/*.java StructuralDecorator.java
 
 Run:
-java -cp out structuraldesignpattern.decorator.src.StructuralDecorator
+java -cp out structuraldesignpatterns.decorator.src.StructuralDecorator
 
 Expected Output:
 encrypted(compressed(raw-data))
