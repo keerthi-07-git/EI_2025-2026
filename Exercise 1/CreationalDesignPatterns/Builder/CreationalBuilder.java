@@ -13,7 +13,7 @@ public class CreationalBuilder {
         String method = sc.nextLine().toUpperCase();
 
         String body = null;
-        if (!method.equals("GET")) { // usually GET doesn’t have body
+        if (!method.equals("GET")) { // GET doesn’t have body
             System.out.print("Enter Request Body (or leave blank): ");
             body = sc.nextLine();
         }
@@ -24,9 +24,10 @@ public class CreationalBuilder {
                 .body(body)
                 .build();
 
-        System.out.println("\n✅ Built Request:");
+        System.out.println("\nBuilt Request:");
         System.out.println(req);
 
         sc.close();
     }
 }
+
