@@ -1,29 +1,31 @@
-Strategy Pattern
+## Strategy Pattern
 
-Overview  
+## Overview  
 The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Here, it demonstrates switching between sorting algorithms (QuickSort and MergeSort) at runtime.
 
-Setup  
+## Setup  
 Clone this repository or download it as a ZIP and extract it:
 https://github.com/keerthi-07-git/EI_2025-2026.git
 
 
 Navigate into BehaviouralDesignPattern/Strategy before running the commands below.
 
-Structure  
+## Structure  
 - SortStrategy: Strategy interface  
 - QuickSort: Concrete strategy  
 - MergeSort: Concrete strategy  
 - Sorter: Context class that uses a strategy  
 - BehaviouralStrategy: Main class with entry point  
 
-How to Run  
-Compile:
+## How to Run  
+### Compile:
 javac -d out -cp out src/*.java BehaviouralStrategy.java
 
-Run:
+### Run:
 java -cp out behaviouraldesignpattern.strategy.src.BehaviouralStrategy
 
-Expected Output:
-QuickSort executed  
-MergeSort executed
+### Expected Output:
+
+QuickSort executed  [sorted array]
+
+MergeSort executed  [sorted array]
