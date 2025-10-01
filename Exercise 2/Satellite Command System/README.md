@@ -21,28 +21,28 @@ Optional (choose one):
 Method 1: Download from GitHub (no Git required)
 ------------------------------------------------
 Step 1: Download the Project
-1. Go to the GitHub repository: https://github.com/yourusername/your-repo-name
+1. Go to the GitHub repository: https://github.com/keerthi-07-git/EI_2025-2026.git
 2. Click the green "Code" button
 3. Click "Download ZIP"
 4. Extract the ZIP file to a location such as C:\Projects or ~/Projects
 
 Step 2: Navigate to the Project
 Windows:
-    cd C:\Projects\your-repo-name-main\ex2\satellitecmdsys  
+    cd C:\Projects\EI_2025-2026\Exercise 2\Satellite Command System  
 Mac/Linux:
-    cd ~/Projects/your-repo-name-main/ex2/satellitecmdsys  
+    cd ~/Projects/EI_2025-2026\Exercise 2\Satellite Command System  
 
 Step 3: Run the Application
 Option A - Using Eclipse:  
 1. Open Eclipse  
 2. File → Import → Existing Projects into Workspace  
-3. Browse to: your-repo-name-main/ex2/satellitecmdsys  
+3. Browse to: EI_2025-2026\Exercise 2\Satellite Command System   
 4. Finish  
-5. Navigate to src/main/java/com/satellite/command/SatelliteCommandSystemApplication.java  
+5. Navigate to src/com/satellite/command/SatelliteCommandSystemApplication.java  
 6. Right-click → Run As → Java Application  
 
 Option B - Using Command Line:  
-    javac -d bin -sourcepath src/main/java src/main/java/com/satellite/command/**/*.java  
+    javac -d bin -sourcepath src/com/satellite/command/**/*.java  
     java -cp bin com.satellite.command.SatelliteCommandSystemApplication  
 
 Option C - Using Maven (if pom.xml exists):  
@@ -54,8 +54,8 @@ Method 2: Clone from GitHub
 Step 1: Clone the Repository  
     cd C:\Projects        (Windows)  
     cd ~/Projects         (Mac/Linux)  
-    git clone https://github.com/yourusername/your-repo-name.git  
-    cd your-repo-name/ex2/satellitecmdsys  
+    git clone https://github.com/keerthi-07-git/EI_2025-2026.git 
+    cd EI_2025-2026\Exercise 2\Satellite Command System   
 
 Step 2: Open in Eclipse  
 1. Open Eclipse  
@@ -64,7 +64,7 @@ Step 2: Open in Eclipse
 4. Select the project and click Finish  
 
 Step 3: Run the Application  
-Open src/main/java → com.satellite.command → SatelliteCommandSystemApplication.java  
+Open src/com/satellite/command → SatelliteCommandSystemApplication.java  
 Right-click → Run As → Java Application  
 
 Using the Application
@@ -75,7 +75,7 @@ When the application starts, you will see the main console with a prompt:
 Example commands:
     help
     status
-    rotate south
+    rotate <direction>
     activate
     collect
     stats
