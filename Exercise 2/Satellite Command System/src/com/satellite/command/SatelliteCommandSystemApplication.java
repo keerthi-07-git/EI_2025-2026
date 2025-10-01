@@ -156,7 +156,7 @@ public class SatelliteCommandSystemApplication {
         System.out.println("Final Status: " + satelliteController.getCurrentStatus());
         
         if (totalCommands > 0) {
-            System.out.println("Type 'history' before exit to see command history.");
+            System.out.println("Command history available in logs.");
         }
         
         System.out.println("Thank you for using Satellite Command System!");
@@ -166,5 +166,7 @@ public class SatelliteCommandSystemApplication {
         }
         
         logger.info("Application shutdown completed");
+        
+        logger.close();
     }
 }
