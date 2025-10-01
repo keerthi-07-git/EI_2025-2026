@@ -12,5 +12,6 @@ Structure
 - BehaviouralChain: Main class with entry point.
 
 How to Run
+
 javac -d out -cp out src/*.java BehaviouralChain.java
 java -cp out behaviouraldesignpattern.chainofresponsibility.src.BehaviouralChain
