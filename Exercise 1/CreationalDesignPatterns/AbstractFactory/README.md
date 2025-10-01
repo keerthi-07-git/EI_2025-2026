@@ -40,16 +40,20 @@ javac -d out -cp out src/*.java CreationalAbstractFactory.java
 java -cp out creationaldesignpatterns.abstractfactory.src.CreationalAbstractFactory
 
 ### output 
+Choose Database Factory:
+1. PostgreSQL
+2. MySQL
+Enter choice: 1
+
 === Using PostgreSQL Factory ===
 Connecting to PostgreSQL database...
 Starting PostgreSQL transaction...
+Enter SQL command (or type 'exit' to quit): SELECT * FROM employees
 Executing PostgreSQL query: SELECT * FROM employees
+Enter SQL command (or type 'exit' to quit): UPDATE employees SET salary = salary + 1000 WHERE id = 101
 Executing PostgreSQL query: UPDATE employees SET salary = salary + 1000 WHERE id = 101
+Enter SQL command (or type 'exit' to quit): commit
 Committing PostgreSQL transaction...
+Enter SQL command (or type 'exit' to quit): exit
+Program finished.
 
-=== Using MySQL Factory ===
-Connecting to MySQL database...
-Starting MySQL transaction...
-Executing MySQL query: SELECT * FROM users
-Executing MySQL query: DELETE FROM users WHERE id = 10
-Rolling back MySQL transaction...
