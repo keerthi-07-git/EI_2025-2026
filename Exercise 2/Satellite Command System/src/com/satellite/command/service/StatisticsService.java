@@ -95,6 +95,7 @@ public class StatisticsService {
         int filled = (int) ((value * barLength) / (double) total);
         int empty = barLength - filled;
         
-        return "[" + "█".repeat(Math.max(0, filled)) + "░".repeat(Math.max(0, empty)) + "]";
+        return "[" + "+".repeat(Math.max(0, filled)) + "-".repeat(Math.max(0, empty)) + "]"; //+ represents progress
     }
 }
+
