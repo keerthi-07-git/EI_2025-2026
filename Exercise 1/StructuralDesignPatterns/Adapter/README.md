@@ -21,7 +21,7 @@ Compile:
 javac -d out -cp out src/*.java StructuralAdapter.java
 
 Run:
-java -cp out structuraldesignpattern.adapter.src.StructuralAdapter
+java -cp out structuraldesignpatterns.adapter.src.StructuralAdapter
 
 Expected Output:
 Legacy: System started
