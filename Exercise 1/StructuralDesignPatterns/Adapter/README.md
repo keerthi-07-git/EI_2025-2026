@@ -1,24 +1,21 @@
-# Decorator Pattern
+# Adapter Pattern
 
 ## Overview
-The Decorator pattern allows behavior to be added to individual objects, dynamically, without affecting the behavior of other objects from the same class. Here, `SimpleCoffee` can be decorated with `MilkDecorator` and `SugarDecorator` to add new functionality.
+The Adapter pattern converts the interface of a class into another interface that clients expect. Here, a `LegacyLogger` is adapted to work as a `ModernLogger` using a `LoggerAdapter`.
 
 ## Setup
 Clone this repository or download it as a ZIP and extract it:
 
 https://github.com/keerthi-07-git/EI_2025-2026.git
 
-Navigate into `StructuralDesignPattern/Decorator` before running the commands below.
+Navigate into `StructuralDesignPattern/Adapter` before running the commands below.
 
 ## Structure
 
-- **Coffee**: Interface for coffee objects  
-- **SimpleCoffee**: Concrete implementation of `Coffee`  
-- **CoffeeDecorator**: Abstract decorator implementing `Coffee`  
-- **MilkDecorator**: Adds milk functionality to a coffee object  
-- **SugarDecorator**: Adds sugar functionality to a coffee object  
-- **StructuralDecorator**: Main class with entry point
-
+- **LegacyLogger**: Existing class with an older logging method  
+- **ModernLogger**: Target interface that client code expects  
+- **LoggerAdapter**: Adapter class that bridges `LegacyLogger` to `ModernLogger`  
+- **StructuralAdapter**: Main class with entry point to demonstrate the adapter
 
 
 ## How to Run  
