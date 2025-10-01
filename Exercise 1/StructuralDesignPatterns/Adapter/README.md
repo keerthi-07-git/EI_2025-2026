@@ -19,18 +19,16 @@ Navigate into `StructuralDesignPattern/Decorator` before running the commands be
 - **SugarDecorator**: Adds sugar functionality to a coffee object  
 - **StructuralDecorator**: Main class with entry point
 
-## How to Run
-**Compile:**  
-```bash
-javac -d out -cp out src/*.java StructuralDecorator.java
 
 
-How to Run  
-Compile:
+## How to Run  
+**Compile:**
 javac -d out -cp out src/*.java StructuralAdapter.java
 
-Run:
+**Run:**
 java -cp out structuraldesignpatterns.adapter.src.StructuralAdapter
+
+**Output:**
 Cost: <total_cost>
 Description: Simple Coffee, Milk, Sugar
 
