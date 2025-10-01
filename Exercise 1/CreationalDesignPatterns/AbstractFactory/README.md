@@ -22,7 +22,7 @@ javac -d out -cp out src/*.java CreationalAbstractFactory.java
 
 Run:
 
-java -cp out creationaldesignpattern.abstractfactory.src.CreationalAbstractFactory
+java -cp out creationaldesignpatterns.abstractfactory.src.CreationalAbstractFactory
 
 Expected Output:
 Connecting PostgreSQL...
