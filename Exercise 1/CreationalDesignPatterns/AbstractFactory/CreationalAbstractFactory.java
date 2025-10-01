@@ -21,7 +21,7 @@ public class CreationalAbstractFactory {
             factory = new MySQLFactory();
             System.out.println("\n=== Using MySQL Factory ===");
         } else {
-            System.out.println("❌ Invalid choice! Defaulting to PostgreSQL.");
+            System.out.println("Invalid choice! Defaulting to PostgreSQL.");
             factory = new PostgresFactory();
         }
 
@@ -46,7 +46,8 @@ public class CreationalAbstractFactory {
             }
         }
 
-        System.out.println("✅ Program finished.");
+        System.out.println("Program finished.");
         sc.close();
     }
 }
+
