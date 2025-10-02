@@ -48,9 +48,13 @@ Solar Panels: "Active"
 Data Collected: 10
 #### Evaluation Criteria
 1.Code Quality: Utilization of best practices, SOLID principles, and design patterns is highlyencouraged.
+
 2.Functionality: Does your implementation correctly execute the commands and maintain thesatellite's state?
+
 3.Global Convention: Your code should be easily understandable and maintainable.
+
 4.Gold Standards: Logging, exception-handling, and transient error-handling mechanismsshould be implemented.
+
 5.Code Walkthrough: Be prepared to explain your decisions, design patterns used, and theoverall architecture during a code review.
 
 The intent behind the 'Satellite Command System' coding exercise is to evaluate a candidate'sability to design and implement a system that manages state transitions and dependenciesbetween various components... The challenge provides a realistic yet simplified simulation ofwhat engineers might encounter in fields like aerospace technology or complex systemmanagement.
