@@ -15,14 +15,17 @@ You are tasked with developing a Satellite Command System that simulates control
 
 #### Functional Requirements
 1.Initialize the Satellite: Create a class or function that initializes the satellite's attributes totheir initial state.
+
 2.Rotate: Implement a command called 'rotate' that takes a direction parameter (North, South,East, West) and sets the satellite's orientation accordingly.
 Example:
 rotate(North)
 would set the orientation to "North".
+
 3.Activate/Deactivate Solar Panels: Implement commands called 'activatePanels' and'deactivatePanels' to control the solar panels' status.
 Example:
 activatePanels()
 would set the solar panels to "Active".
+
 4.Collect Data: Implement a command called 'collectData' that increments the 'Data Collected'attribute by 10 units, but only if the solar panels are "Active".
 Example:
 collectData()
